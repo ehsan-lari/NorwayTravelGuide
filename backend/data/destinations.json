@@ -3716,6 +3716,103 @@
         "scenic route",
         "nature"
       ]
+    },
+    {
+      "id": "nordkapp",
+      "name": "Nordkapp (North Cape)",
+      "region": "Northern Norway",
+      "county": "Finnmark",
+      "lat": 71.1709,
+      "lon": 25.7836,
+      "short_description": "The northernmost point of mainland Europe, where the continent drops dramatically into the Arctic Ocean.",
+      "description": "Standing at the edge of the North Cape plateau feels like standing at the end of the world. It is the northernmost point of mainland Europe accessible by car. During summer, the sun never sets for two and a half months, and in winter it is a dramatic, windswept outpost perfect for extreme snowmobiling and the northern lights.",
+      "type": [
+        "coastal",
+        "arctic",
+        "landmark"
+      ],
+      "activities": [
+        "midnight_sun",
+        "northern_lights",
+        "photography",
+        "road_trip",
+        "snowmobiling"
+      ],
+      "best_months": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "ok_months": [
+        2,
+        3,
+        4,
+        9,
+        10
+      ],
+      "avoid_months": [
+        11,
+        12,
+        1
+      ],
+      "budget_level": 3,
+      "daily_cost_nok": {
+        "budget": 1200,
+        "mid": 2500,
+        "premium": 5000
+      },
+      "crowd_level": 3,
+      "transport": {
+        "has_airport": true,
+        "airport_codes": [
+          "HVG"
+        ],
+        "train_accessible": false,
+        "ferry_accessible": true,
+        "drive_from_oslo_hours": 26,
+        "drive_from_bergen_hours": 32
+      },
+      "weather": {
+        "monthly_avg_temp_c": [
+          -4.0,
+          -4.5,
+          -3.0,
+          0.0,
+          4.0,
+          8.0,
+          11.0,
+          10.5,
+          7.5,
+          3.0,
+          -0.5,
+          -2.5
+        ],
+        "monthly_precip_mm": [
+          80,
+          75,
+          60,
+          50,
+          40,
+          45,
+          55,
+          60,
+          75,
+          90,
+          85,
+          80
+        ]
+      },
+      "highlights": [
+        "The Globe Monument",
+        "Midnight Sun",
+        "Honningsvåg"
+      ],
+      "tags": [
+        "bucket list",
+        "remote",
+        "northernmost"
+      ]
     }
   ]
 }
