@@ -10,7 +10,7 @@ import httpx
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
-USER_AGENT = "NorwayTravelGuide/1.0 contact@example.com"
+USER_AGENT = "NorwayTravelGuide/1.0 (https://github.com/ehsan-lari/NorwayTravelGuide)"
 
 SYMBOL_DESCRIPTIONS = {
     "clearsky": "Clear sky",
