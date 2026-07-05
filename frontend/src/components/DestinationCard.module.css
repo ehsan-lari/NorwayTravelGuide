@@ -1,0 +1,298 @@
+.card {
+  position: relative;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border-bright);
+}
+
+/* ── Rank Badge ──────────────────────────────────────────── */
+.rankBadge {
+  position: absolute;
+  top: -1px;
+  left: 24px;
+  background: linear-gradient(135deg, var(--aurora-teal), var(--aurora-blue));
+  color: var(--color-bg);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  letter-spacing: 0.04em;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+}
+
+.headerLeft { flex: 1; }
+
+.destName {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.destRegion {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.regionDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--aurora-teal);
+  flex-shrink: 0;
+}
+
+/* ── Match Ring ──────────────────────────────────────────── */
+.matchRing {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.matchSvg {
+  width: 64px;
+  height: 64px;
+  transform: scale(1.45);
+}
+
+.matchNum {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.matchNum span:first-child {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.matchLabel {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Season Row ──────────────────────────────────────────── */
+.seasonRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.seasonNote {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* ── Narration ───────────────────────────────────────────── */
+.narration {
+  background: rgba(0, 201, 167, 0.06);
+  border-left: 3px solid var(--aurora-teal);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.narrationIcon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.narration p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+/* ── Short desc ──────────────────────────────────────────── */
+.shortDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ── Highlights ──────────────────────────────────────────── */
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.highlightList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.highlightDot {
+  color: var(--aurora-teal);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+/* ── Tags ────────────────────────────────────────────────── */
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ── Stats ───────────────────────────────────────────────── */
+.statsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.statIcon { font-size: 1.3rem; }
+
+.statBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statValue {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* ── Transport ───────────────────────────────────────────── */
+.transportSection {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.transportToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.transportToggle:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+}
+
+.chevronDown, .chevronUp {
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast);
+  display: inline-block;
+}
+
+.chevronUp { transform: rotate(180deg); }
+
+.transportList {
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.transportItem {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.transportIcon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+.transportBody { display: flex; flex-direction: column; gap: 2px; }
+
+.transportDuration {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--aurora-teal);
+}
+
+.transportDesc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.transportCost {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Coords ──────────────────────────────────────────────── */
+.coords {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: 'Courier New', monospace;
+  padding-top: var(--space-xs);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .card { padding: var(--space-lg); }
+  .statsRow { grid-template-columns: 1fr; }
+  .destName { font-size: 1.2rem; }
+}

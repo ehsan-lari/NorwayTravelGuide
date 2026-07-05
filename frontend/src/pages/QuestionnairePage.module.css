@@ -1,0 +1,327 @@
+.page {
+  min-height: 100vh;
+  padding: calc(var(--nav-height) + var(--space-xl)) 0 var(--space-2xl);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ── Progress ──────────────────────────────────────────── */
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progressPct {
+  font-size: 0.78rem;
+  color: var(--aurora-teal);
+  font-weight: 700;
+}
+
+.stepDots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.stepDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-border-bright);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.dotActive {
+  background: var(--aurora-teal);
+  width: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(0, 201, 167, 0.5);
+}
+
+.dotDone {
+  background: rgba(0, 201, 167, 0.4);
+}
+
+/* ── Card ──────────────────────────────────────────────── */
+.card {
+  padding: var(--space-xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.stepTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.stepSubtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: -8px;
+}
+
+.stepBody {
+  min-height: 180px;
+}
+
+/* ── Month Grid ─────────────────────────────────────────── */
+.monthGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+}
+
+.monthCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-md) var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.monthCard:hover {
+  border-color: var(--color-border-bright);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.monthEmoji { font-size: 1.5rem; }
+.monthLabel { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); }
+.monthHint  { font-size: 0.65rem; color: var(--text-muted); line-height: 1.3; }
+
+/* ── Generic Option Grid ────────────────────────────────── */
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-sm);
+}
+
+.optionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-lg) var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.optionCard:hover {
+  border-color: var(--color-border-bright);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.optionEmoji { font-size: 2rem; }
+.optionLabel { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); }
+.optionHint  { font-size: 0.75rem; color: var(--text-muted); }
+
+/* ── Interests Grid ─────────────────────────────────────── */
+.interestsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.interestChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.interestChip:hover {
+  border-color: var(--color-border-bright);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.interestEmoji { font-size: 1.1rem; }
+
+.checkmark {
+  font-size: 0.75rem;
+  color: var(--aurora-teal);
+  font-weight: 800;
+}
+
+/* ── Budget Grid ────────────────────────────────────────── */
+.budgetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.budgetCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-lg) var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.budgetCard:hover {
+  border-color: var(--color-border-bright);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.budgetEmoji { font-size: 2rem; }
+.budgetLabel { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+.budgetSub   { font-size: 0.78rem; color: var(--aurora-teal); font-weight: 600; }
+.budgetHint  { font-size: 0.72rem; color: var(--text-muted); }
+
+/* ── Selected state (shared) ─────────────────────────────── */
+.selected {
+  border-color: var(--aurora-teal) !important;
+  background: rgba(0, 201, 167, 0.1) !important;
+  box-shadow: 0 0 0 1px var(--aurora-teal), var(--shadow-glow);
+}
+
+/* ── Duration Step ──────────────────────────────────────── */
+.durationStep {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.travelersRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.travelersLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.counterRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.counterBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-bright);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.counterBtn:hover {
+  background: rgba(0, 201, 167, 0.15);
+  border-color: var(--aurora-teal);
+  color: var(--aurora-teal);
+}
+
+.counterValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  min-width: 28px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* ── Error ──────────────────────────────────────────────── */
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  font-size: 0.88rem;
+  color: var(--color-danger);
+}
+
+/* ── Navigation Row ─────────────────────────────────────── */
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.nextBtn {
+  min-width: 180px;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .monthGrid   { grid-template-columns: repeat(3, 1fr); }
+  .budgetGrid  { grid-template-columns: 1fr; }
+  .optionGrid  { grid-template-columns: repeat(2, 1fr); }
+  .card        { padding: var(--space-lg); }
+}
+
+@media (max-width: 400px) {
+  .monthGrid { grid-template-columns: repeat(2, 1fr); }
+}
