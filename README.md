@@ -1,4 +1,4 @@
-# 🇳🇴 Fjord & Beyond — Norway Travel Recommender
+# Fjord & Beyond — Norway Travel Recommender
 
 > AI-powered travel recommendation system for Norway. Tell us when you're traveling, what excites you, and your budget — we'll mathematically find your perfect Norwegian destination.
 
