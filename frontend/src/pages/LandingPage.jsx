@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import styles from './LandingPage.module.css'
 
 const FEATURES = [
@@ -19,6 +20,23 @@ const DESTINATIONS_PREVIEW = [
 ]
 
 export default function LandingPage({ onGetStarted }) {
+  const [destCount, setDestCount] = useState(26)
+
+  useEffect(() => {
+    const fetchHealth = async () => {
+      try {
+        const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/health`)
+        const data = await res.json()
+        if (data.destinations_loaded) {
+          setDestCount(data.destinations_loaded)
+        }
+      } catch (err) {
+        console.error('Failed to fetch destination count', err)
+      }
+    }
+    fetchHealth()
+  }, [])
+
   return (
     <div className={styles.page}>
       {/* ── Hero Section ── */}
@@ -32,7 +50,7 @@ export default function LandingPage({ onGetStarted }) {
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroBadge}>
             <span className={styles.heroBadgeDot} />
-            <span>26 curated Norwegian destinations</span>
+            <span>{destCount} curated Norwegian destinations</span>
           </div>
 
           <h1 className={`display-title ${styles.heroTitle}`}>
@@ -56,7 +74,7 @@ export default function LandingPage({ onGetStarted }) {
             </button>
             <div className={styles.heroStats}>
               <div className={styles.heroStat}>
-                <strong>26</strong>
+                <strong>{destCount}</strong>
                 <span>Destinations</span>
               </div>
               <div className={styles.heroStatDivider} />
@@ -125,7 +143,7 @@ export default function LandingPage({ onGetStarted }) {
           <div className={styles.stepsGrid}>
             {[
               { num: '01', title: 'Tell us about yourself', desc: 'Share your travel month, budget, interests, and departure city in a guided questionnaire.' },
-              { num: '02', title: 'We do the heavy lifting', desc: 'Our engine scores 26 destinations across 6 dimensions and Gemini AI crafts your personalised summaries.' },
+              { num: '02', title: 'We do the heavy lifting', desc: `Our engine scores ${destCount} destinations across 6 dimensions and Gemini AI crafts your personalised summaries.` },
               { num: '03', title: 'Explore your matches', desc: 'Browse ranked destinations on an interactive map, with live weather, transport routes, and cost estimates.' },
             ].map((step, i) => (
               <div key={i} className={styles.step}>
