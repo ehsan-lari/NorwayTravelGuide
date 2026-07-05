@@ -3813,6 +3813,103 @@
         "remote",
         "northernmost"
       ]
+    },
+    {
+      "id": "arctic_circle_center",
+      "name": "Arctic Circle Center",
+      "region": "Northern Norway",
+      "county": "Nordland",
+      "lat": 66.5516,
+      "lon": 15.3236,
+      "short_description": "The official crossing point into the Arctic Circle, located on the stark and beautiful Saltfjellet mountain pass.",
+      "description": "Located right on the 66°33'N line, the Arctic Circle Center sits high on the barren, wind-swept Saltfjellet mountain plateau. It serves as the gateway to the Arctic. While primarily a tourist center and monument, the surrounding Saltfjellet-Svartisen National Park offers incredible hiking, and stepping across the physical line of the Arctic Circle is a classic Norwegian road trip milestone.",
+      "type": [
+        "landmark",
+        "mountain",
+        "arctic"
+      ],
+      "activities": [
+        "road_trip",
+        "history",
+        "photography",
+        "hiking"
+      ],
+      "best_months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "ok_months": [
+        5,
+        10
+      ],
+      "avoid_months": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "budget_level": 1,
+      "daily_cost_nok": {
+        "budget": 500,
+        "mid": 1000,
+        "premium": 2000
+      },
+      "crowd_level": 2,
+      "transport": {
+        "has_airport": false,
+        "airport_codes": [
+          "BOO",
+          "MQN"
+        ],
+        "train_accessible": false,
+        "ferry_accessible": false,
+        "drive_from_oslo_hours": 14,
+        "drive_from_bergen_hours": 20
+      },
+      "weather": {
+        "monthly_avg_temp_c": [
+          -8.0,
+          -7.5,
+          -5.0,
+          -1.0,
+          4.0,
+          8.0,
+          11.0,
+          10.5,
+          6.0,
+          1.0,
+          -4.0,
+          -6.5
+        ],
+        "monthly_precip_mm": [
+          110,
+          95,
+          80,
+          65,
+          55,
+          60,
+          85,
+          95,
+          120,
+          140,
+          125,
+          115
+        ]
+      },
+      "highlights": [
+        "Arctic Circle Monument",
+        "Saltfjellet-Svartisen National Park",
+        "Souvenir Post Office"
+      ],
+      "tags": [
+        "road trip",
+        "milestone",
+        "nature"
+      ]
     }
   ]
 }
