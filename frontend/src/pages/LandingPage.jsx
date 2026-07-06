@@ -20,7 +20,7 @@ const DESTINATIONS_PREVIEW = [
 ]
 
 export default function LandingPage({ onGetStarted }) {
-  const [destCount, setDestCount] = useState(26)
+  const [destCount, setDestCount] = useState('...')
 
   useEffect(() => {
     const fetchHealth = async () => {
