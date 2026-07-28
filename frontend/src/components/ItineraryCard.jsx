@@ -15,7 +15,7 @@ export default function ItineraryCard({ itinerary }) {
             💰 {itinerary.budget_level === 1 ? 'Budget' : itinerary.budget_level === 2 ? 'Mid-Range' : 'Premium'}
           </p>
         </div>
-        <button className="btn btn-outline">
+        <button className={styles.toggleBtn}>
           {expanded ? 'Hide Details ▲' : 'View Itinerary ▼'}
         </button>
       </div>
