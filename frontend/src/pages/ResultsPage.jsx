@@ -1,5 +1,6 @@
 import DestinationCard from '../components/DestinationCard'
 import NorwayMap from '../components/NorwayMap'
+import ItineraryCard from '../components/ItineraryCard'
 import styles from './ResultsPage.module.css'
 
 const MONTH_NAMES = [
@@ -8,7 +9,7 @@ const MONTH_NAMES = [
 ]
 
 export default function ResultsPage({ data, preferences, onStartOver, onRestart }) {
-  const { recommendations, travel_month_name, total_destinations_evaluated, user_summary } = data
+  const { recommendations, travel_month_name, total_destinations_evaluated, user_summary, matched_itineraries } = data
 
   const top = recommendations[0]
   const monthName = travel_month_name || MONTH_NAMES[(preferences?.travel_month || 7) - 1]
@@ -100,6 +101,20 @@ export default function ResultsPage({ data, preferences, onStartOver, onRestart 
 
           {/* Right: Cards */}
           <section className={styles.cardsPanel} aria-label="Destination recommendations">
+            
+            {/* ── Itineraries Section ── */}
+            {matched_itineraries && matched_itineraries.length > 0 && (
+              <div style={{marginBottom: '3rem'}}>
+                <h2 className={styles.cardsTitle}>🗺️ Curated Trips For You</h2>
+                <p className={styles.cardsSubtitle} style={{marginBottom: '1.5rem'}}>
+                  Based on your top matches, these pre-planned routes are perfect for your trip.
+                </p>
+                {matched_itineraries.map(itin => (
+                  <ItineraryCard key={itin.id} itinerary={itin} />
+                ))}
+              </div>
+            )}
+
             <div className={styles.cardsHeader}>
               <h2 className={styles.cardsTitle}>Ranked Destinations</h2>
               <p className={styles.cardsSubtitle}>

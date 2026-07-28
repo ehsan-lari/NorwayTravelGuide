@@ -82,3 +82,22 @@ class RecommendationResponse(BaseModel):
     travel_month_name: str
     total_destinations_evaluated: int
     user_summary: str
+    matched_itineraries: List['Itinerary'] = []
+
+
+class ItineraryDay(BaseModel):
+    day: int
+    title: str
+    description: str
+
+
+class Itinerary(BaseModel):
+    id: str
+    title: str
+    description: str
+    duration_days: int
+    budget_level: int
+    target_destinations: List[str]
+    day_by_day: List[ItineraryDay]
+
+RecommendationResponse.model_rebuild()

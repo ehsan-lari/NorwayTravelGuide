@@ -14,7 +14,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-from models import UserPreferences, RecommendationResponse, DestinationRecommendation, WeatherData, TransportOption
+from models import UserPreferences, RecommendationResponse, DestinationRecommendation, WeatherData, TransportOption, Itinerary, ItineraryDay
 from routers.recommend import rank_destinations, get_user_summary, get_best_for, MONTH_NAMES
 from services.forecast_service import get_weather_for_destinations
 from services.gemini_service import generate_batch_narrations
@@ -23,15 +23,21 @@ from services.entur_service import get_transport_options
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# ── Load destinations database ──────────────────────────────────────────────
+# ── Load databases ────────────────────────────────────────────────────────────
 DATA_PATH = Path(__file__).parent / "data" / "destinations.json"
+ITINERARY_PATH = Path(__file__).parent / "data" / "itineraries.json"
 
 def load_destinations() -> List[dict]:
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         return json.load(f)["destinations"]
 
+def load_itineraries() -> List[dict]:
+    with open(ITINERARY_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)["itineraries"]
+
 DESTINATIONS = load_destinations()
-logger.info(f"Loaded {len(DESTINATIONS)} destinations.")
+ITINERARIES = load_itineraries()
+logger.info(f"Loaded {len(DESTINATIONS)} destinations and {len(ITINERARIES)} itineraries.")
 
 # ── FastAPI app ──────────────────────────────────────────────────────────────
 app = FastAPI(
@@ -176,11 +182,35 @@ async def recommend(preferences: UserPreferences):
         )
         recommendations.append(rec)
 
+    # 6. Match pre-baked itineraries
+    top_ids = {d["id"] for d in top_destinations}
+    matched_itineraries = []
+    for itin in ITINERARIES:
+        target_ids = set(itin["target_destinations"])
+        # If at least 50% of the itinerary's target destinations are in the user's top 10, it's a match.
+        # Or if it's a 1-day itinerary, require exact match (1/1).
+        overlap = target_ids.intersection(top_ids)
+        if len(target_ids) > 0:
+            match_ratio = len(overlap) / len(target_ids)
+            if match_ratio >= 0.5:
+                # Convert dict to Pydantic model
+                itin_model = Itinerary(
+                    id=itin["id"],
+                    title=itin["title"],
+                    description=itin["description"],
+                    duration_days=itin["duration_days"],
+                    budget_level=itin["budget_level"],
+                    target_destinations=itin["target_destinations"],
+                    day_by_day=[ItineraryDay(**d) for d in itin["day_by_day"]]
+                )
+                matched_itineraries.append(itin_model)
+
     return RecommendationResponse(
         recommendations=recommendations,
         travel_month_name=MONTH_NAMES[preferences.travel_month - 1],
         total_destinations_evaluated=len(DESTINATIONS),
         user_summary=get_user_summary(prefs_dict),
+        matched_itineraries=matched_itineraries
     )
 
 

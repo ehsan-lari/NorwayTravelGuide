@@ -1,0 +1,96 @@
+.card {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent-1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-2);
+  background: rgba(43, 217, 254, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.timeline {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
+.dayRow {
+  position: relative;
+}
+
+/* Timeline dot */
+.dayRow::before {
+  content: '';
+  position: absolute;
+  left: -1.45rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-1);
+  box-shadow: 0 0 10px var(--accent-1);
+}
+
+.dayNumber {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-1);
+  margin-bottom: 0.2rem;
+}
+
+.dayTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.dayDesc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

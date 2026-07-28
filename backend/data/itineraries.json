@@ -1,0 +1,91 @@
+{
+  "itineraries": [
+    {
+      "id": "classic_fjord",
+      "title": "The Classic Fjord Roadtrip",
+      "description": "Experience the absolute best of Fjord Norway, from historic Bergen to the majestic Geirangerfjord.",
+      "duration_days": 7,
+      "budget_level": 2,
+      "target_destinations": ["bergen", "flam", "sognefjord", "geirangerfjord"],
+      "day_by_day": [
+        {"day": 1, "title": "Arrival in Bergen", "description": "Explore the UNESCO-listed Bryggen wharf and take the Fløibanen funicular for a panoramic view of the city."},
+        {"day": 2, "title": "The Flåm Railway", "description": "Take the scenic train from Bergen to Myrdal, then down the steep mountain valley to Flåm on the famous Flåmsbana."},
+        {"day": 3, "title": "Nærøyfjord Cruise", "description": "Take a silent electric ferry cruise through the spectacular Nærøyfjord, then spend the evening in the village of Aurland."},
+        {"day": 4, "title": "Drive the Snow Road", "description": "Drive the spectacular Aurlandsfjellet National Tourist Route towards the inner Sognefjord, stopping at the Stegastein viewpoint."},
+        {"day": 5, "title": "Sognefjord to Geiranger", "description": "A full day driving north through glacier country and steep valleys to reach the iconic Geirangerfjord."},
+        {"day": 6, "title": "Geirangerfjord Viewpoints", "description": "Visit the Flydalsjuvet viewpoint and hike up to Storsæterfossen to walk behind the waterfall."},
+        {"day": 7, "title": "Trollstigen & Departure", "description": "Drive the famous Trollstigen mountain road (the Troll's Ladder) before heading to Ålesund for your departure flight."}
+      ]
+    },
+    {
+      "id": "arctic_explorer",
+      "title": "The Arctic Explorer",
+      "description": "A thrilling adventure above the Arctic Circle, chasing the northern lights, steep peaks, and the northernmost edge of Europe.",
+      "duration_days": 10,
+      "budget_level": 3,
+      "target_destinations": ["tromso", "lofoten", "senja", "nordkapp"],
+      "day_by_day": [
+        {"day": 1, "title": "Welcome to Tromsø", "description": "Arrive in the 'Paris of the North', visit the Arctic Cathedral, and take the Fjellheisen cable car."},
+        {"day": 2, "title": "Senja Bound", "description": "Pick up a rental car and drive to the island of Senja. Stop at the Tungeneset viewpoint for sunset."},
+        {"day": 3, "title": "Hiking in Senja", "description": "Hike the iconic Segla or Hesten trails for dramatic ocean-facing mountain views."},
+        {"day": 4, "title": "Ferry to Lofoten", "description": "Take the summer ferry from Gryllefjord (Senja) to Andenes, then drive south into the Lofoten Islands."},
+        {"day": 5, "title": "Lofoten Highlights", "description": "Explore the fishing villages of Henningsvær and Nusfjord. Enjoy a seafood dinner in a traditional rorbu."},
+        {"day": 6, "title": "Reine and Å", "description": "Drive to the stunning southern tip of Lofoten. Hike Reinebringen if you're up for the steep stairs."},
+        {"day": 7, "title": "Flight to Alta", "description": "Drive to Leknes or Evenes airport, drop the car, and catch a flight to Alta in Finnmark."},
+        {"day": 8, "title": "Drive to the Edge", "description": "Rent a car in Alta and drive the barren, beautiful plateau up towards Honningsvåg."},
+        {"day": 9, "title": "The North Cape", "description": "Visit Nordkapp, the northernmost point of mainland Europe. Stand at the globe monument under the midnight sun (or northern lights)."},
+        {"day": 10, "title": "Departure", "description": "Drive back to Alta or catch a flight from Honningsvåg (HVG) to conclude your Arctic expedition."}
+      ]
+    },
+    {
+      "id": "national_parks",
+      "title": "The National Parks Explorer",
+      "description": "A hiker's dream itinerary moving through Norway's highest mountains and most pristine wilderness areas.",
+      "duration_days": 5,
+      "budget_level": 2,
+      "target_destinations": ["jotunheimen", "rondane", "lillehammer"],
+      "day_by_day": [
+        {"day": 1, "title": "Lillehammer Culture", "description": "Arrive in Lillehammer, explore the Maihaugen open-air museum and the 1994 Olympic ski jump arena."},
+        {"day": 2, "title": "Into Rondane", "description": "Drive north into Rondane National Park. Hike the gentle, moss-covered trails surrounded by 2,000-meter peaks."},
+        {"day": 3, "title": "Scenic Route to Jotunheimen", "description": "Drive the Valdresflye National Tourist Route into Jotunheimen, 'Home of the Giants'."},
+        {"day": 4, "title": "The Besseggen Ridge", "description": "Take the ferry across Lake Gjende and hike the famous Besseggen Ridge back to Gjendesheim (challenging but rewarding)."},
+        {"day": 5, "title": "Return to Oslo", "description": "Enjoy a quiet morning by the mountains before driving the scenic Route 51 back down towards Oslo."}
+      ]
+    },
+    {
+      "id": "oslo_oneday",
+      "title": "Oslo in One Day",
+      "description": "A fast-paced, curated 24-hour itinerary covering the absolute highlights of Norway's capital city.",
+      "duration_days": 1,
+      "budget_level": 2,
+      "target_destinations": ["oslo"],
+      "day_by_day": [
+        {"day": 1, "title": "The Ultimate Oslo Loop", "description": "Morning: Walk the roof of the Opera House and explore the Munch Museum. Afternoon: Take the ferry to Bygdøy to see the Fram polar ship museum. Evening: Stroll through Vigeland Sculpture Park, followed by dinner at Aker Brygge."}
+      ]
+    },
+    {
+      "id": "trondheim_oneday",
+      "title": "Trondheim in One Day",
+      "description": "Experience the historic capital of the Vikings, known for its Gothic cathedral and colorful wharves.",
+      "duration_days": 1,
+      "budget_level": 2,
+      "target_destinations": ["trondheim"],
+      "day_by_day": [
+        {"day": 1, "title": "Viking History & Wharves", "description": "Morning: Marvel at the Nidaros Cathedral, the northernmost medieval cathedral in the world. Afternoon: Walk across the Old Town Bridge (Gamle Bybro) and photograph the colorful Bakklandet wharves. Evening: Enjoy a Michelin-level dinner in this recognized European capital of gastronomy."}
+      ]
+    },
+    {
+      "id": "kjerag_preikestolen",
+      "title": "Preikestolen and Kjerag",
+      "description": "An intense, thrilling 3-day itinerary from Stavanger to conquer Norway's two most famous cliff hikes.",
+      "duration_days": 3,
+      "budget_level": 2,
+      "target_destinations": ["stavanger", "preikestolen"],
+      "day_by_day": [
+        {"day": 1, "title": "Stavanger & Lysefjord Cruise", "description": "Arrive in Stavanger, explore the charming white wooden houses of Gamle Stavanger, and take a 3-hour fjord cruise into the Lysefjord to see the cliffs from below."},
+        {"day": 2, "title": "Hike to Preikestolen", "description": "Take the bus from Stavanger and hike to Preikestolen (Pulpit Rock). Stand 604 meters straight above the fjord. Spend the night in the Stavanger area or near Lysebotn."},
+        {"day": 3, "title": "Conquer Kjerag", "description": "Take the early morning ferry deep into the Lysefjord to Lysebotn. Endure the challenging hike to the Kjeragbolten boulder wedged in the mountain crevasse, then return to Stavanger."}
+      ]
+    }
+  ]
+}
