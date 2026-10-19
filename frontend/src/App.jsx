@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import LandingPage from './pages/LandingPage'
 import QuestionnairePage from './pages/QuestionnairePage'
 import ResultsPage from './pages/ResultsPage'
@@ -87,6 +88,7 @@ export default function App() {
           />
         )}
       </main>
+      <Analytics />
     </div>
   )
 }
